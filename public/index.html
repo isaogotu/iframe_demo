@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <script>
+    window.addEventListener(
+      "message",
+      function (e) {
+        var iframe = $("#parentframe");
+        var eventName = e.data[0];
+        var data = e.data[1];
+        switch (eventName) {
+          case "setHeight":
+            iframe.height(data);
+            break;
+        }
+      },
+      false
+    );
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ページ切り替え</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <input
+          type="button"
+          value="page1"
+          onclick="document.getElementById('P1').style.visibility = 'visible';document.getElementById('P2').style.visibility = 'hidden';document.getElementById('P3').style.visibility = 'hidden';"
+        />
+        <input
+          type="button"
+          value="Page2"
+          onclick="document.getElementById('P1').style.visibility = 'hidden';document.getElementById('P2').style.visibility = 'visible';document.getElementById('P3').style.visibility = 'hidden';"
+        />
+        <input
+          type="button"
+          value="Page3"
+          onclick="document.getElementById('P1').style.visibility = 'hidden';document.getElementById('P2').style.visibility = 'hidden';document.getElementById('P3').style.visibility = 'visible';"
+        />
+
+        <p>
+          <iframe
+            src="page1.html"
+            name="target"
+            id="P1"
+            width="100%"
+            height="400"
+            style="float: right; position: absolute;"
+            frameborder="no"
+            scrolling="no"
+          ></iframe>
+        </p>
+
+        <p>
+          <iframe
+            src="page2.html"
+            name="target"
+            id="P2"
+            width="100%"
+            height="300"
+            style="float: right; position: absolute;"
+            frameborder="no"
+            scrolling="no"
+          ></iframe>
+        </p>
+        <p>
+          <iframe
+            src="page3.html"
+            name="target"
+            id="P3"
+            width="100%"
+            height="300"
+            style="float: right; position: absolute;"
+            frameborder="no"
+            scrolling="no"
+          ></iframe>
+        </p>
+      </ul>
+    </nav>
+  </body>
+</html>

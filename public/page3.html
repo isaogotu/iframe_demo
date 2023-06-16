@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <script type="text/javascript">
+    window.onload = function () {
+      var height = document.getElementsByTagName("html")[0].scrollHeight;
+      window.parent.postMessage(["setHeight", height], "*");
+    };
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page 3</title>
+  </head>
+
+  <body>
+    <h1>Page 3</h1>
+    <p>ここはPage3です。</p>
+    <form action="#" method="post">
+      <p>
+        お名前：<br />
+        <input type="text" name="name" size="15" />
+      </p>
+
+      <p>
+        ご住所：<br />
+        <input type="text" name="address" size="30" />
+      </p>
+
+      <p><input type="button" value="確認する" id="button2" /></p>
+    </form>
+  </body>
+</html>

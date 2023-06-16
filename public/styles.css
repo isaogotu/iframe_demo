@@ -1,0 +1,35 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.content {
+  margin: 0;
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+ul {
+  list-style: none;
+}
+
+iframe {
+  border: 0;
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 50%;
+  height: auto;
+}
